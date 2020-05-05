@@ -1,38 +1,85 @@
-.App {
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #191920;
+  margin: 0;
+  padding: 0;
+}
+
+.cart ion-icon {
+  color: white;
+  padding-left: 10px;
+  padding-right: 5px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.product-container {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  margin-top: 10px;
+  flex-direction: row;
+}
+
+.active {
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+.image {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-product .img-wrap {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  position: relative;
+  height: 150px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-product .img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.card-product .info-wrap {
+  overflow: hidden;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+.card-product .bottom-wrap {
+  padding: 15px;
+  border-top: 1px solid #eee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.label-rating {
+  margin-right: 10px;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card-product .price-old {
+  color: #999;
+}
+
+.white-text {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  text-decoration: 'none !important';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 690px) {
+  .product-container {
+    display: flex;
+    justify-content: center;
   }
 }
